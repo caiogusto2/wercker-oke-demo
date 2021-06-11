@@ -45,6 +45,7 @@ deploy-to-kubernetes:
         name: deploy to kubernetes
         server: $OKE_MASTER
         token: $OKE_TOKEN
+        username: $DOCKER_USERNAME
         insecure-skip-tls-verify: true
         command: apply -f $WERCKER_OUTPUT_DIR/kubernetes/
 
