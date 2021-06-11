@@ -52,7 +52,8 @@ deploy-to-kubernetes:
     - kubectl:
         name: set deployment timeout
         server: $OKE_MASTER
-        token: $OKE_TOKEN
+        #token: $OKE_TOKEN
+        username: 'user-cx6ygxlotqa'
         insecure-skip-tls-verify: true
         command: patch deployment/get-ip -p '{"spec":{"progressDeadlineSeconds":500}}'
 
